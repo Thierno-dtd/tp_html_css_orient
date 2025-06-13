@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santé - ORIENT</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="fade-in">
+        <div class="container">
+            <h1 class="slide-in-left">ORIENT</h1>
+            <p class="slide-in-right">Filière Santé</p>
+        </div>
+    </header>
+
+    <nav class="sticky-nav">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../index.html#filieres">Filières</a></li>
+                <li><a href="../index.html#ecoles">Écoles</a></li>
+                <li><a href="../test-orientation.html">Test d'orientation</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section hero-filiere" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../images/sante.jpg');">
+        <div class="container">
+            <h2 class="fade-in-up">Filière Santé</h2>
+            <p class="fade-in-up delay-1">Formation aux métiers de la médecine, pharmacie et soins de santé</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="filiere-details">
+                <div class="filiere-overview slide-in-left">
+                    <h3>Présentation de la filière</h3>
+                    <p>La filière santé forme les futurs professionnels de la médecine, de la pharmacie, des soins infirmiers et des autres métiers paramédicaux. Ces formations exigent rigueur, compassion et engagement envers le bien-être des patients.</p>
+                    
+                    <div class="filiere-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>78%</span>
+                            <p>Taux d'insertion professionnelle</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <span>5-12 ans</span>
+                            <p>Durée des formations</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>200k-1M</span>
+                            <p>Coût annuel moyen (FCFA)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filiere-image slide-in-right">
+                    <img src="../images/sante.png" alt="Étudiants en santé">
+                </div>
+            </div>
+            
+            <div class="specialites">
+                <h3 class="section-title">Spécialités disponibles</h3>
+                
+                <div class="specialites-grid">
+                    <div class="specialite-card hover-grow" id="medecine">
+                        <h4><i class="fas fa-user-md"></i> Médecine</h4>
+                        <p>Médecine générale, spécialisations chirurgicales, pédiatrie, etc.</p>
+                        <p><strong>Débouchés:</strong> Médecin généraliste, chirurgien, spécialiste</p>
+                        <a href="#ecoles-medecine" class="btn-small">Voir écoles</a>
+                    </div>
+                    
+                    <div class="specialite-card hover-grow" id="pharmacie">
+                        <h4><i class="fas fa-pills"></i> Pharmacie</h4>
+                        <p>Pharmacie hospitalière, industrie pharmaceutique, officine</p>
+                        <p><strong>Débouchés:</strong> Pharmacien, chercheur, industriel</p>
+                        <a href="#ecoles-pharmacie" class="btn-small">Voir écoles</a>
+                    </div>
+                    
+                    <div class="specialite-card hover-grow" id="infirmier">
+                        <h4><i class="fas fa-procedures"></i> Sciences Infirmières</h4>
+                        <p>Soins infirmiers, gestion des services de santé, spécialisations</p>
+                        <p><strong>Débouchés:</strong> Infirmier, cadre de santé, spécialiste</p>
+                        <a href="#ecoles-infirmier" class="btn-small">Voir écoles</a>
+                    </div>
+                    
+                    <div class="specialite-card hover-grow" id="kinesitherapie">
+                        <h4><i class="fas fa-spa"></i> Kinésithérapie</h4>
+                        <p>Rééducation fonctionnelle, sport, neurologie, pédiatrie</p>
+                        <p><strong>Débouchés:</strong> Kinésithérapeute, rééducateur</p>
+                        <a href="#" class="btn-small">Voir écoles</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ecoles-filiere">
+                <h3 class="section-title">Écoles proposant cette filière</h3>
+                
+                <div class="ecoles-specialite" id="ecoles-medecine">
+                    <h4>Écoles pour Médecine</h4>
+                    <div class="ecoles-list">
+                        <a href="#" class="ecole-item hover-shake">
+                            <div class="ecole-badge">
+                                <i class="fas fa-star"></i> Top 1
+                            </div>
+                            <h5>Faculté de Médecine de Ville X</h5>
+                            <p><strong>Localisation:</strong> Ville X</p>
+                            <p><strong>Coût:</strong> 300 000 FCFA/an</p>
+                            <p><strong>Admission:</strong> Concours très sélectif</p>
+                            <span class="btn-small">Voir détails</span>
+                        </a>
+                        
+                        <div class="ecole-item hover-shake">
+                            <div class="ecole-badge">
+                                <i class="fas fa-star"></i> Top 2
+                            </div>
+                            <h5>École de Médecine de Ville Y</h5>
+                            <p><strong>Localisation:</strong> Ville Y</p>
+                            <p><strong>Coût:</strong> 450 000 FCFA/an</p>
+                            <p><strong>Admission:</strong> Concours + entretien</p>
+                            <span class="btn-small">Voir détails</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ecoles-specialite" id="ecoles-pharmacie">
+                    <h4>Écoles pour Pharmacie</h4>
+                    <div class="ecoles-list">
+                        <div class="ecole-item hover-shake">
+                            <div class="ecole-badge">
+                                <i class="fas fa-star"></i> Top 1
+                            </div>
+                            <h5>Faculté de Pharmacie de Ville Z</h5>
+                            <p><strong>Localisation:</strong> Ville Z</p>
+                            <p><strong>Coût:</strong> 400 000 FCFA/an</p>
+                            <p><strong>Admission:</strong> Concours national</p>
+                            <span class="btn-small">Voir détails</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ecoles-specialite" id="ecoles-infirmier">
+                    <h4>Écoles pour Sciences Infirmières</h4>
+                    <div class="ecoles-list">
+                        <div class="ecole-item hover-shake">
+                            <div class="ecole-badge">
+                                <i class="fas fa-star"></i> Top 1
+                            </div>
+                            <h5>Institut de Formation en Soins Infirmiers</h5>
+                            <p><strong>Localisation:</strong> Ville X</p>
+                            <p><strong>Coût:</strong> 200 000 FCFA/an</p>
+                            <p><strong>Admission:</strong> Dossier + test</p>
+                            <span class="btn-small">Voir détails</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="test-cta">
+                <h3>Vous ne savez pas quelle spécialité choisir ?</h3>
+                <p>Passez notre test d'orientation pour obtenir des suggestions personnalisées</p>
+                <a href="../test-orientation.html" class="btn pulse">Faire le test d'orientation</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="fade-in">
+        <div class="container">
+            <p>&copy; 2023 ORIENT - Tous droits réservés</p>
+            <p>Plateforme d'orientation pour nouveaux bacheliers</p>
+        </div>
+    </footer>
+</body>
+</html>

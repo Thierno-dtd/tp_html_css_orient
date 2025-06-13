@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sciences et Technologies - ORIENT</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="fade-in">
+        <div class="container">
+            <h1 class="slide-in-left">ORIENT</h1>
+            <p class="slide-in-right">Filière Sciences et Technologies</p>
+        </div>
+    </header>
+
+    <nav class="sticky-nav">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../index.html#filieres">Filières</a></li>
+                <li><a href="../index.html#ecoles">Écoles</a></li>
+                <li><a href="../test-orientation.html">Test d'orientation</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section hero-filiere" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../images/sciences.jpg');">
+        <div class="container">
+            <h2 class="fade-in-up">Sciences et Technologies</h2>
+            <p class="fade-in-up delay-1">Explorez les domaines de l'ingénierie, de l'informatique et des sciences exactes</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="filiere-details">
+                <div class="filiere-overview slide-in-left">
+                    <h3>Présentation de la filière</h3>
+                    <p>Les sciences et technologies regroupent l'ensemble des disciplines qui étudient les phénomènes naturels et développent des applications techniques. Cette filière forme des professionnels capables de résoudre des problèmes complexes grâce à une approche scientifique.</p>
+                    
+                    <div class="filiere-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>85%</span>
+                            <p>Taux d'insertion professionnelle</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <span>3-5 ans</span>
+                            <p>Durée des formations</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>300k-800k</span>
+                            <p>Coût annuel moyen (FCFA)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filiere-image slide-in-right">
+                    <img src="../images/imageScience.png" alt="Étudiants en sciences">
+                </div>
+            </div>
+            
+            <div class="specialites">
+                <h3 class="section-title">Spécialités disponibles</h3>
+                
+                <div class="specialites-grid">
+                    <div class="specialite-card hover-grow" id="informatique">
+                        <h4><i class="fas fa-laptop-code"></i> Informatique</h4>
+                        <p>Programmation, réseaux, intelligence artificielle, cybersécurité</p>
+                        <p><strong>Débouchés:</strong> Développeur, ingénieur système, data scientist</p>
+                        <a href="#ecoles-informatique" class="btn-small">Voir écoles</a>
+                    </div>
+                    
+                    <div class="specialite-card hover-grow" id="genie-civil">
+                        <h4><i class="fas fa-building"></i> Génie Civil</h4>
+                        <p>Construction, infrastructures, urbanisme, matériaux</p>
+                        <p><strong>Débouchés:</strong> Ingénieur civil, chef de chantier, urbaniste</p>
+                        <a href="#ecoles-genie-civil" class="btn-small">Voir écoles</a>
+                    </div>
+                    
+                    <div class="specialite-card hover-grow" id="mathematiques">
+                        <h4><i class="fas fa-square-root-alt"></i> Mathématiques Appliquées</h4>
+                        <p>Modélisation, statistiques, recherche opérationnelle</p>
+                        <p><strong>Débouchés:</strong> Actuaire, analyste financier, chercheur</p>
+                        <a href="#ecoles-mathematiques" class="btn-small">Voir écoles</a>
+                    </div>
+                    
+                    <div class="specialite-card hover-grow">
+                        <h4><i class="fas fa-atom"></i> Physique</h4>
+                        <p>Physique fondamentale, physique appliquée, énergie</p>
+                        <p><strong>Débouchés:</strong> Chercheur, enseignant, ingénieur R&D</p>
+                        <a href="#" class="btn-small">Voir écoles</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ecoles-filiere">
+                <h3 class="section-title">Écoles proposant cette filière</h3>
+                
+                <div class="ecoles-specialite" id="ecoles-informatique">
+                    <h4>Écoles pour Informatique</h4>
+                    <div class="ecoles-list">
+                        <a href="../ecoles/universite-sciences.html" class="ecole-item hover-shake">
+                            <div class="ecole-badge">
+                                <i class="fas fa-star"></i> Top 1
+                            </div>
+                            <h5>Université de Sciences et Technologies</h5>
+                            <p><strong>Localisation:</strong> Ville X</p>
+                            <p><strong>Coût:</strong> 500 000 FCFA/an</p>
+                            <p><strong>Admission:</strong> Concours ou dossier</p>
+                            <span class="btn-small">Voir détails</span>
+                        </a>
+                        
+                        <div class="ecole-item hover-shake">
+                            <div class="ecole-badge">
+                                <i class="fas fa-star"></i> Top 2
+                            </div>
+                            <h5>École Nationale d'Informatique</h5>
+                            <p><strong>Localisation:</strong> Ville Y</p>
+                            <p><strong>Coût:</strong> 600 000 FCFA/an</p>
+                            <p><strong>Admission:</strong> Concours</p>
+                            <span class="btn-small">Voir détails</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ecoles-specialite" id="ecoles-genie-civil">
+                    <h4>Écoles pour Génie Civil</h4>
+                    <div class="ecoles-list">
+                        <div class="ecole-item hover-shake">
+                            <div class="ecole-badge">
+                                <i class="fas fa-star"></i> Top 1
+                            </div>
+                            <h5>École Polytechnique</h5>
+                            <p><strong>Localisation:</strong> Ville X</p>
+                            <p><strong>Coût:</strong> 550 000 FCFA/an</p>
+                            <p><strong>Admission:</strong> Concours</p>
+                            <span class="btn-small">Voir détails</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ecoles-specialite" id="ecoles-mathematiques">
+                    <h4>Écoles pour Mathématiques Appliquées</h4>
+                    <div class="ecoles-list">
+                        <div class="ecole-item hover-shake">
+                            <div class="ecole-badge">
+                                <i class="fas fa-star"></i> Top 1
+                            </div>
+                            <h5>Université des Sciences Exactes</h5>
+                            <p><strong>Localisation:</strong> Ville Z</p>
+                            <p><strong>Coût:</strong> 250 000 FCFA/an</p>
+                            <p><strong>Admission:</strong> Dossier</p>
+                            <span class="btn-small">Voir détails</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="test-cta">
+                <h3>Vous ne savez pas quelle spécialité choisir ?</h3>
+                <p>Passez notre test d'orientation pour obtenir des suggestions personnalisées</p>
+                <a href="../test-orientation.html" class="btn pulse">Faire le test d'orientation</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="fade-in">
+        <div class="container">
+            <p>&copy; 2023 ORIENT - Tous droits réservés</p>
+            <p>Plateforme d'orientation pour nouveaux bacheliers</p>
+        </div>
+    </footer>
+</body>
+</html>

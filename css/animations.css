@@ -1,0 +1,143 @@
+/* Animations de base */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { 
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from { 
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from { 
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from { 
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to { 
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes hoverGrow {
+    from { transform: scale(1); }
+    to { transform: scale(1.03); }
+}
+
+@keyframes hoverShake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Classes d'animation */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+}
+
+.slide-in-up {
+    animation: slideInUp 0.8s ease-out;
+}
+
+.zoom-in {
+    animation: zoomIn 1s ease-out;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Animations au survol */
+.hover-grow {
+    transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+    animation: hoverGrow 0.3s forwards;
+}
+
+.hover-shake {
+    transition: transform 0.3s ease;
+}
+
+.hover-shake:hover {
+    animation: hoverShake 0.5s;
+}
+
+/* Délais pour les animations */
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+/* Animation pour la navigation fixe */
+.sticky-nav {
+    transition: all 0.3s ease;
+}
+
+.sticky-nav.scrolled {
+    background-color: rgba(52, 73, 94, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation des étapes du formulaire */
+.form-step {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.form-step.active {
+    display: block;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test d'Orientation - ORIENT</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header class="fade-in">
+        <div class="container">
+            <h1 class="slide-in-left">ORIENT</h1>
+            <p class="slide-in-right">Test d'orientation pour nouveaux bacheliers</p>
+        </div>
+    </header>
+
+    <nav class="sticky-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#filieres">Filières</a></li>
+                <li><a href="index.html#ecoles">Écoles</a></li>
+                <li><a href="test-orientation.html" class="active">Test d'orientation</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section hero-test">
+        <div class="container">
+            <h2 class="fade-in-up">Test d'Orientation</h2>
+            <p class="fade-in-up delay-1">Répondez à ce questionnaire pour recevoir des suggestions personnalisées de filières et d'établissements.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <form id="orientation-form" class="slide-in-up">
+                <div class="form-steps">
+                    <div class="form-step active" id="step-1">
+                        <h3>Informations personnelles</h3>
+                        
+                        <div class="form-group">
+                            <label for="nom">Nom complet:</label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ville">Ville de résidence:</label>
+                            <input type="text" id="ville" name="ville" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="serie">Série du baccalauréat:</label>
+                            <select id="serie" name="serie" required onchange="updateMatieres()">
+                                <option value="">-- Sélectionnez --</option>
+                                <option value="scientifique">Scientifique</option>
+                                <option value="litteraire">Littéraire</option>
+                                <option value="economique">Économique</option>
+                                <option value="technique">Technique</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="moyenne">Moyenne au baccalauréat:</label>
+                            <input type="number" id="moyenne" name="moyenne" min="0" max="20" step="0.1" required>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn next-step" data-next="step-2">Suivant</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step" id="step-2">
+                        <h3>Notes dans les matières principales</h3>
+                        
+                        <div id="matieres-container">
+                            <p class="info-message">Veuillez d'abord sélectionner votre série au baccalauréat.</p>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="step-1">Précédent</button>
+                            <button type="button" class="btn next-step" data-next="step-3">Suivant</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-step" id="step-3">
+                        <h3>Centres d'intérêt et préférences</h3>
+                        
+                        <div class="form-group">
+                            <label for="interets">Centres d'intérêt (séparés par des virgules):</label>
+                            <textarea id="interets" name="interets" placeholder="Ex: informatique, lecture, dessin, médecine..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Préférences géographiques:</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="pref_region" value="nord"> Nord du pays</label>
+                                <label><input type="checkbox" name="pref_region" value="sud"> Sud du pays</label>
+                                <label><input type="checkbox" name="pref_region" value="est"> Est du pays</label>
+                                <label><input type="checkbox" name="pref_region" value="ouest"> Ouest du pays</label>
+                                <label><input type="checkbox" name="pref_region" value="centre"> Centre du pays</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Budget annuel approximatif:</label>
+                            <select name="budget" required>
+                                <option value="">-- Sélectionnez --</option>
+                                <option value="100000">Moins de 100 000 FCFA</option>
+                                <option value="300000">100 000 - 300 000 FCFA</option>
+                                <option value="500000">300 000 - 500 000 FCFA</option>
+                                <option value="800000">500 000 - 800 000 FCFA</option>
+                                <option value="1000000">Plus de 800 000 FCFA</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="step-2">Précédent</button>
+                            <button type="submit" class="btn">Soumettre le test</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="fade-in">
+        <div class="container">
+            <p>&copy; 2023 ORIENT - Tous droits réservés</p>
+            <p>Plateforme d'orientation pour nouveaux bacheliers</p>
+        </div>
+    </footer>
+
+    <script>
+        function updateMatieres() {
+            const serie = document.getElementById('serie').value;
+            const container = document.getElementById('matieres-container');
+            
+            if (!serie) {
+                container.innerHTML = '<p class="info-message">Veuillez d\'abord sélectionner votre série au baccalauréat.</p>';
+                return;
+            }
+            
+            let matieres = [];
+            
+            if (serie === 'scientifique') {
+                matieres = ['Mathématiques', 'Physique-Chimie', 'Sciences de la Vie et de la Terre', 'Français', 'Philosophie'];
+            } else if (serie === 'litteraire') {
+                matieres = ['Littérature', 'Philosophie', 'Histoire-Géographie', 'Langues Vivantes', 'Français'];
+            } else if (serie === 'economique') {
+                matieres = ['Mathématiques', 'Économie', 'Histoire-Géographie', 'Français', 'Philosophie'];
+            } else if (serie === 'technique') {
+                matieres = ['Mathématiques', 'Physique', 'Technologie', 'Français', 'Dessin Technique'];
+            }
+            
+            let html = '<div class="matieres-grid">';
+            matieres.forEach(matiere => {
+                html += `
+                    <div class="form-group">
+                        <label for="note_${matiere.toLowerCase().replace(/ /g, '_')}">${matiere}:</label>
+                        <input type="number" id="note_${matiere.toLowerCase().replace(/ /g, '_')}" 
+                               name="note_${matiere.toLowerCase().replace(/ /g, '_')}" 
+                               min="0" max="20" step="0.1" required>
+                    </div>
+                `;
+            });
+            html += '</div>';
+            
+            container.innerHTML = html;
+        }
+        
+        document.querySelectorAll('.next-step').forEach(button => {
+            button.addEventListener('click', function() {
+                const currentStep = this.closest('.form-step');
+                const nextStepId = this.getAttribute('data-next');
+                
+                currentStep.classList.remove('active');
+                document.getElementById(nextStepId).classList.add('active');
+            });
+        });
+        
+        document.querySelectorAll('.prev-step').forEach(button => {
+            button.addEventListener('click', function() {
+                const currentStep = this.closest('.form-step');
+                const prevStepId = this.getAttribute('data-prev');
+                
+                currentStep.classList.remove('active');
+                document.getElementById(prevStepId).classList.add('active');
+            });
+        });
+        
+        document.getElementById('orientation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'resultats-orientation.html';
+        });
+
+         document.getElementById('orientation-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Récupérer toutes les données du formulaire
+        const formData = {
+            nom: document.getElementById('nom').value,
+            email: document.getElementById('email').value,
+            ville: document.getElementById('ville').value,
+            serie: document.getElementById('serie').value,
+            moyenne: parseFloat(document.getElementById('moyenne').value),
+            notes: {},
+            interets: document.getElementById('interets').value,
+            region: Array.from(document.querySelectorAll('input[name="pref_region"]:checked')).map(el => el.value),
+            budget: document.querySelector('select[name="budget"]').value
+        };
+
+        // Récupérer les notes selon la série
+        const serie = formData.serie;
+        if (serie === 'scientifique') {
+            formData.notes = {
+                maths: parseFloat(document.getElementById('note_mathématiques').value),
+                physique: parseFloat(document.getElementById('note_physique-chimie').value),
+                svt: parseFloat(document.getElementById('note_sciences_de_la_vie_et_de_la_terre').value),
+                francais: parseFloat(document.getElementById('note_français').value),
+                philo: parseFloat(document.getElementById('note_philosophie').value)
+            };
+        } else if (serie === 'litteraire') {
+            formData.notes = {
+                litterature: parseFloat(document.getElementById('note_littérature').value),
+                philo: parseFloat(document.getElementById('note_philosophie').value),
+                histoire: parseFloat(document.getElementById('note_histoire-géographie').value),
+                langues: parseFloat(document.getElementById('note_langues_vivantes').value),
+                francais: parseFloat(document.getElementById('note_français').value)
+            };
+        } // Ajouter les autres séries...
+
+        // Stocker les données dans le localStorage pour les récupérer sur la page résultats
+        localStorage.setItem('orientationData', JSON.stringify(formData));
+        
+        // Rediriger vers la page de résultats
+        window.location.href = 'resultats-orientation.html';
+    });
+    </script>
+</body>
+</html>
